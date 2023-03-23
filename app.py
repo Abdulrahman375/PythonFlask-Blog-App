@@ -187,7 +187,7 @@ def dashboard():
 # Article Form class
 class ArticleForm(Form):
     title = StringField('Title',[validators.Length(min=1 , max=200)])
-    body = TextAreaField('Body',[validators.Length(min=30)])
+    body = TextAreaField('Body',[validators.Length(min=1)])
   
 
 # Add Article 
@@ -253,8 +253,6 @@ def edit_article(id):
         
         #Close connection 
         cur.close()
-        
-        flash('Article Updated' ,'success')
         return redirect(url_for('dashboard'))
     return render_template('edit_article.html',form=form)
 
