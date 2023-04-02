@@ -274,7 +274,6 @@ def delete_article(id):
 
 
     # ResetPassword
-
 # @app.route('/resetPassword',methods = ['GET','POST'])
 # def resetPassword():
 #     form = RegisterForm(request.form)
